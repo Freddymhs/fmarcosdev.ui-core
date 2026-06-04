@@ -149,7 +149,7 @@ export const DailyFocusPill: React.FC<DailyFocusPillProps> = ({
         }
              @media (min-width: 400px) {
           .pill__icon {
-            display: center;
+            display: flex;
           }
         }
                @media (max-width: 600px) {
