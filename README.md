@@ -36,5 +36,6 @@ import { DailyFocusPill } from "@fmarcosdev/ui-core";
 - `npm run build` — empaqueta ESM+CJS y tipos a `dist/` (tsup).
 - `npm run dev` — watch.
 - `npm run lint` — chequea `src/**` con ESLint (flat config).
+- `npm run release -- <OTP>` — bump patch, build, publica a npm (2FA) y pushea el tag. Hace rollback del bump si el publish falla.
 
 React/ReactDOM son peer dependencies (no se incluyen). Ajusta los estilos en el componente si quieres otro theme; las CSS vars están inline.

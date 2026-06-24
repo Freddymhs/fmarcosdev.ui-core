@@ -28,7 +28,8 @@
     "build": "tsup src/index.ts --format esm,cjs --dts --clean --target es2020",
     "dev": "tsup src/index.ts --format esm,cjs --dts --watch --target es2020",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "release": "bash release.sh"
   },
   "peerDependencies": {
     "react": "^18 || ^19",
