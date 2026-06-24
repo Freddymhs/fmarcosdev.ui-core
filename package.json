@@ -1,6 +1,14 @@
 {
   "name": "@fmarcosdev/ui-core",
   "version": "0.1.1",
+  "description": "UI component library for fmarcos.dev — React + TypeScript.",
+  "author": "freddymhs",
+  "license": "MIT",
+  "keywords": ["react", "typescript", "ui", "components", "fmarcosdev"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Freddymhs/fmarcosdev.ui-core"
+  },
   "private": false,
   "type": "module",
   "main": "./dist/index.cjs",
@@ -19,16 +27,24 @@
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --clean --target es2020",
     "dev": "tsup src/index.ts --format esm,cjs --dts --watch --target es2020",
-    "lint": "eslint \"src/**/*.{ts,tsx}\""
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "react": "^18 || ^19",
     "react-dom": "^18 || ^19"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
+    "eslint": "^10.4.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
     "tsup": "^8.3.0",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.60.1"
+  },
+  "volta": {
+    "node": "20.19.4"
   }
 }
