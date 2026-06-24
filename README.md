@@ -1,4 +1,4 @@
-# @fmarcos/ui-core
+# @fmarcosdev/ui-core
 
 Librería de componentes React mínima para compartir UI entre proyectos (ej. `fmarcosdev.app.web`).
 
@@ -8,7 +8,7 @@ En `fmarcosdev.app.web/package.json`, añade:
 
 ```json
 "dependencies": {
-  "@fmarcos/ui-core": "file:../fmarcosdev.ui-core"
+  "@fmarcosdev/ui-core": "file:../fmarcosdev.ui-core"
 }
 ```
 
@@ -22,7 +22,7 @@ npm install
 Ejemplo de uso:
 
 ```tsx
-import { DailyFocusPill } from "@fmarcos/ui-core";
+import { DailyFocusPill } from "@fmarcosdev/ui-core";
 
 <DailyFocusPill
   study="Claude Code"
