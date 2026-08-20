@@ -26,13 +26,6 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           package-manager-cache: false
 
-      - name: Debug OIDC env
-        run: |
-          echo "GITHUB_ACTIONS=$GITHUB_ACTIONS"
-          echo "ACTIONS_ID_TOKEN_REQUEST_URL=$ACTIONS_ID_TOKEN_REQUEST_URL"
-          echo "ACTIONS_ID_TOKEN_REQUEST_TOKEN=${ACTIONS_ID_TOKEN_REQUEST_TOKEN:0:20}..."
-          echo "NPM_ID_TOKEN=${NPM_ID_TOKEN:0:20}..."
-
       - name: Install deps
         run: npm ci
 
