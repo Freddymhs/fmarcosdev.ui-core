@@ -26,15 +26,12 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           package-manager-cache: false
 
-      - name: Request OIDC token from GitHub
-        id: oidc
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const audience = 'npm:registry.npmjs.org';
-            const token = await core.getIDToken(audience);
-            core.exportVariable('NPM_ID_TOKEN', token);
-            core.setOutput('token', token);
+      - name: Debug OIDC env
+        run: |
+          echo "GITHUB_ACTIONS=$GITHUB_ACTIONS"
+          echo "ACTIONS_ID_TOKEN_REQUEST_URL=$ACTIONS_ID_TOKEN_REQUEST_URL"
+          echo "ACTIONS_ID_TOKEN_REQUEST_TOKEN=${ACTIONS_ID_TOKEN_REQUEST_TOKEN:0:20}..."
+          echo "NPM_ID_TOKEN=${NPM_ID_TOKEN:0:20}..."
 
       - name: Install deps
         run: npm ci
